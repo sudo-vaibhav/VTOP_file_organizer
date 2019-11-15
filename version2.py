@@ -19,9 +19,6 @@ for f in [file for file in files if os.path.isfile(file)]:
 		name=re.sub(r"--+"," ",name)
 		name=re.sub(r"_"," ",name)
 		name=re.sub(r"  +"," ",name)
-		print("src: {}".format(os.path.join(os.getcwd(),f)))
-		print("dest: {}".format(os.path.join(os.getcwd(),folder_name,name)))
-		
 		if os.path.isdir(folder_name):
 			shutil.move(os.path.join(os.getcwd(),f),os.path.join(os.getcwd(),folder_name,name))
 		else:
